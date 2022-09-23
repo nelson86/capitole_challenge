@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create_table_prices" author="Arabel">
+        <createTable tableName="prices">
+            <column name="id" type="bigint" generationType="" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_prices" nullable="false" />
+            </column>
+            <column name="brand_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_price_brand" references="brands(id)"/>
+            </column>
+            <column name="start_date" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="end_date" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="price_list" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="product_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="priority" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="price" type="decimal(12,2)">
+                <constraints nullable="false" />
+            </column>
+            <column name="curr" type="char(3)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
