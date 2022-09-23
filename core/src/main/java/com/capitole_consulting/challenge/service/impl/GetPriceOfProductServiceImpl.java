@@ -25,7 +25,7 @@ public class GetPriceOfProductServiceImpl implements GetPriceOfProductService {
 
         if(Objects.isNull(price))
             throw new PriceNotFoundException(
-                    String.format("Not Found Price for applicationDate: %s, productId: %s, brandId: %s",
+                    String.format("applicationDate: %s, productId: %s, brandId: %s",
                             applicationDate, productId, brandId
                             )
             );
