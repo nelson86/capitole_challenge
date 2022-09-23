@@ -1,8 +1,8 @@
 package com.capitole_consulting.challenge.adapter;
 
-import com.capitole_consulting.challenge.domain.Brand;
 import com.capitole_consulting.challenge.domain.Price;
 import com.capitole_consulting.challenge.entity.PriceEntity;
+import com.capitole_consulting.challenge.mapper.PriceEntityMapper;
 import com.capitole_consulting.challenge.repository.GetPriceOfProductRepository;
 import com.capitole_consulting.challenge.repository.PriceJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,9 @@ public class GetPriceOfProductRepositoryImpl implements GetPriceOfProductReposit
     @Autowired
     private PriceJpaRepository repository;
 
+    @Autowired
+    private PriceEntityMapper priceEntityMapper;
+
     @Override
     public Price getFirstPriceWithHighestPriority(LocalDateTime applicationDate, Long productId, Long brandId) {
 
@@ -27,26 +30,7 @@ public class GetPriceOfProductRepositoryImpl implements GetPriceOfProductReposit
         if (Objects.isNull(priceEntity))
             return null;
 
-        return mapToDomain(priceEntity);
-    }
-
-    private Price mapToDomain(PriceEntity priceEntity) {
-        Brand brand = Brand.builder()
-                .id(priceEntity.getBrand().getId())
-                .name(priceEntity.getBrand().getName())
-                .build();
-
-        return Price.builder()
-                .id(priceEntity.getId())
-                .brand(brand)
-                .startDate(priceEntity.getStartDate())
-                .endDate(priceEntity.getEndDate())
-                .priceList(priceEntity.getPriceList())
-                .productId(priceEntity.getProductId())
-                .priority(priceEntity.getPriority())
-                .priceValue(priceEntity.getPrice())
-                .curr(priceEntity.getCurr())
-                .build();
+        return priceEntityMapper.toDomain(priceEntity);
     }
 
 }

@@ -4,6 +4,7 @@ package com.capitole_consulting.challenge.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -17,7 +18,8 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@AllArgsConstructor @NoArgsConstructor @Getter
+@AllArgsConstructor @NoArgsConstructor
+@Getter @Setter
 @Entity
 @Table(name = "prices")
 public class PriceEntity {
