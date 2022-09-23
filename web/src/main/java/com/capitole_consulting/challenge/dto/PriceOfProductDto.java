@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class PriceOfProductDto {
     private Long productId;
     private Long brandId;
-    private Long priceListId;
+    private Long priceList;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private BigDecimal price;

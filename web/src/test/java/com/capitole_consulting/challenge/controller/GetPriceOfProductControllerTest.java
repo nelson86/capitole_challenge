@@ -41,7 +41,7 @@ class GetPriceOfProductControllerTest {
                         status().isOk(),
                         MockMvcResultMatchers.jsonPath("$.productId", Matchers.is(35455)),
                         MockMvcResultMatchers.jsonPath("$.brandId", Matchers.is(1)),
-                        MockMvcResultMatchers.jsonPath("$.priceListId", Matchers.is(1)),
+                        MockMvcResultMatchers.jsonPath("$.priceList", Matchers.is(1)),
                         MockMvcResultMatchers.jsonPath("$.startDate", Matchers.is("2020-06-14T00:00:00")),
                         MockMvcResultMatchers.jsonPath("$.endDate", Matchers.is("2020-12-31T23:59:59")),
                         MockMvcResultMatchers.jsonPath("$.price", Matchers.is(35.5d))
@@ -64,7 +64,7 @@ class GetPriceOfProductControllerTest {
                         status().isOk(),
                         MockMvcResultMatchers.jsonPath("$.productId", Matchers.is(35455)),
                         MockMvcResultMatchers.jsonPath("$.brandId", Matchers.is(1)),
-                        MockMvcResultMatchers.jsonPath("$.priceListId", Matchers.is(2)),
+                        MockMvcResultMatchers.jsonPath("$.priceList", Matchers.is(2)),
                         MockMvcResultMatchers.jsonPath("$.startDate", Matchers.is("2020-06-14T15:00:00")),
                         MockMvcResultMatchers.jsonPath("$.endDate", Matchers.is("2020-06-14T18:30:00")),
                         MockMvcResultMatchers.jsonPath("$.price", Matchers.is(25.45d))
@@ -87,7 +87,7 @@ class GetPriceOfProductControllerTest {
                         status().isOk(),
                         MockMvcResultMatchers.jsonPath("$.productId", Matchers.is(35455)),
                         MockMvcResultMatchers.jsonPath("$.brandId", Matchers.is(1)),
-                        MockMvcResultMatchers.jsonPath("$.priceListId", Matchers.is(1)),
+                        MockMvcResultMatchers.jsonPath("$.priceList", Matchers.is(1)),
                         MockMvcResultMatchers.jsonPath("$.startDate", Matchers.is("2020-06-14T00:00:00")),
                         MockMvcResultMatchers.jsonPath("$.endDate", Matchers.is("2020-12-31T23:59:59")),
                         MockMvcResultMatchers.jsonPath("$.price", Matchers.is(35.5d))
@@ -110,7 +110,7 @@ class GetPriceOfProductControllerTest {
                         status().isOk(),
                         MockMvcResultMatchers.jsonPath("$.productId", Matchers.is(35455)),
                         MockMvcResultMatchers.jsonPath("$.brandId", Matchers.is(1)),
-                        MockMvcResultMatchers.jsonPath("$.priceListId", Matchers.is(3)),
+                        MockMvcResultMatchers.jsonPath("$.priceList", Matchers.is(3)),
                         MockMvcResultMatchers.jsonPath("$.startDate", Matchers.is("2020-06-15T00:00:00")),
                         MockMvcResultMatchers.jsonPath("$.endDate", Matchers.is("2020-06-15T11:00:00")),
                         MockMvcResultMatchers.jsonPath("$.price", Matchers.is(30.5d))
@@ -133,7 +133,7 @@ class GetPriceOfProductControllerTest {
                         status().isOk(),
                         MockMvcResultMatchers.jsonPath("$.productId", Matchers.is(35455)),
                         MockMvcResultMatchers.jsonPath("$.brandId", Matchers.is(1)),
-                        MockMvcResultMatchers.jsonPath("$.priceListId", Matchers.is(4)),
+                        MockMvcResultMatchers.jsonPath("$.priceList", Matchers.is(4)),
                         MockMvcResultMatchers.jsonPath("$.startDate", Matchers.is("2020-06-15T16:00:00")),
                         MockMvcResultMatchers.jsonPath("$.endDate", Matchers.is("2020-12-31T23:59:59")),
                         MockMvcResultMatchers.jsonPath("$.price", Matchers.is(38.95d))

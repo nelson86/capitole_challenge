@@ -34,7 +34,7 @@ public class GetPriceOfProductController {
         return PriceOfProductDto.builder()
                 .productId(price.getProductId())
                 .brandId(price.getBrand().getId())
-                .priceListId(price.getPriceList())
+                .priceList(price.getPriceList())
                 .startDate(price.getStartDate())
                 .endDate(price.getEndDate())
                 .price(price.getPriceValue())
