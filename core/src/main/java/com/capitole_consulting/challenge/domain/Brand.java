@@ -1,12 +1,14 @@
 package com.capitole_consulting.challenge.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Data @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Brand {
-    private BrandId brandIdl;
+    private Long id;
+    private String name;
 }
