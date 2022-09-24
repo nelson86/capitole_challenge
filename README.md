@@ -35,6 +35,13 @@ ___
 #### Documentación OPEN API - SWAGGER Link: http://localhost:8080/swagger-ui/index.html
 #### Acceso a BD H2 Link: http://localhost:8080/h2-console
 
+### Ejecutar con Docker (Ubicarse dentro del proyecto)
+```
+mvn clean package
+docker build -t service-price:1.0 .
+docker run -d -p 8080:8080 -t service-price:1.0
+```
+
 ### Endpoint de prueba:
 ```
 curl --location --request GET 'localhost:8080/v1/prices?applicationDate=2020-06-14T10:00:00&productId=35455&brandId=1'
